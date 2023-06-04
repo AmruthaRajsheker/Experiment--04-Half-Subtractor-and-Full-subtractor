@@ -42,23 +42,22 @@ Program to design a half subtractor and full subtractor circuit and verify its t
 Developed by: AMRUTHA RAJSHEKER
 RegisterNumber:  212222110003
 
-Half Subtractor Program:
+HALF SUBTRACTOR
 
-module HalfSubtractor(A,B,Difference,Borrow);
-input A,B;
-output Difference,Borrow;
-assign Difference = (A ^ B);
-assign Borrow = (~A & B);
+module HS(a,b,d,bo);
+input a,b;
+output d,bo;
+assign d = (a^b);
+assign bo = (~a&b);
 endmodule
 
-Full Subtractor Program:
+FULL SUBTRACTOR
 
-## Output:
-module FullSubtractor(A,B,C,Difference,Borrow);
+module FS(A,B,C,Difference,Borrow);
 input A,B,C;
 output Difference,Borrow;
-assign Difference = (~A &(B ^ C) | (B & C));
-assign Borrow = ( A^B^C);
+assign Difference = (A^B^C);
+assign Borrow = (~A&(B^C)|(B&C));
 endmodule
 
 ```
@@ -69,20 +68,22 @@ endmodule
 ![image](https://user-images.githubusercontent.com/119475943/232224571-91414480-368c-461d-8ff4-3e375ead4735.png)
 
 ##  RTL realization
-HALF SUBTRACTOR
-![image](https://user-images.githubusercontent.com/119475943/232224776-dba41032-d946-475c-a1c9-36c19e516085.png)
+Half Subtractor: 
 
-FULL SUBTRACTOR
-![image](https://user-images.githubusercontent.com/119475943/232224785-057ad4d4-81cb-4833-b82b-9cdf97724f04.png)
+![image](https://github.com/AmruthaRajsheker/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/119475943/e613efd7-ced8-49a3-885a-356a47dfa79c)
+
+Full Subtractor: 
+![image](https://github.com/AmruthaRajsheker/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/119475943/62756c42-da8f-4670-9fa7-5ec57730f49a)
+
 
 
 ## Timing diagram 
 Half Subtractor: 
+![image](https://github.com/AmruthaRajsheker/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/119475943/d92c7f36-5726-4e39-93bf-5ceab1841abd)
 
-![image](https://user-images.githubusercontent.com/119475943/232224810-a377383a-0ebe-4caa-8f3f-ff120c05e090.png)
 
 Full Subtractor: 
-![image](https://user-images.githubusercontent.com/119475943/232224816-63420229-ec19-4bc0-9a22-9a4482c579b7.png)
+![image](https://github.com/AmruthaRajsheker/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/119475943/412420f3-12d5-469c-8046-756470a7fb0c)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
